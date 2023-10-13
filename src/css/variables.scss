@@ -1,0 +1,21 @@
+$dark: rgba(25, 29, 28, 1);
+$gray: rgba(236, 236, 236, 1);
+$orange: rgba(255, 96, 44, 1);
+$blue: rgba(36, 154, 255, 1);
+
+body {
+	--inner-padding: 48px;
+
+	@media(max-width:1200px) {
+		--inner-padding: 24px;
+	}
+
+	@media(max-width:700px) {
+		--inner-padding: 16px;
+	}
+
+	--gradient: linear-gradient(137deg, #A0BA4F 0%, #7A8E3B 97.35%);
+	--dark: #2F3740;
+	--gray: #969696;
+	--green: #7A8E3B;
+}

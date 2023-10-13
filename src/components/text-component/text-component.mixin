@@ -1,0 +1,10 @@
+mixin loacationPrev(video, price,desc,title)
+	.location-prev._hover-in-video&attributes(attributes)
+		.location-prev__img-wrap._br
+			.location-prev__img 
+				video(src="video/"+video+'.mp4' loop  playsinline muted) 
+			.location-prev__price= price
+		.location-prev__desc= desc
+		a.location-prev__title.h3(href="#")= title
+		a.location-prev__link.btn-border._arrow-btn(href="#") Подробнее
+ 

@@ -1,0 +1,36 @@
+
+//- +breadcrumb(['Main page', 'News'], 'News detail')
+mixin breadcrumb(items, last)
+	.breadcrumb.overfolow-x
+		ul.breadcrumb__list&attributes(attributes)
+			each item in items
+				li.breadcrumb__item
+					a(href="#" title=item).breadcrumb__link= item
+
+			if last
+				li.breadcrumb__item
+					span.breadcrumb__link-current= last
+			else
+
+
+mixin picture(name, ext)
+	picture
+		if ext!='svg'
+			source(type="image/webp",srcset="img/"+name+".webp")
+		img(class!=attributes.class, alt="",src="img/"+name+"."+ext)
+
+mixin img(name)
+	img(class!=attributes.class, alt="",src="img/"+name)
+
+
+mixin loacationPrev(video, price,desc,title)
+	.location-prev._hover-in-video&attributes(attributes)
+		.location-prev__img-wrap._br
+			.location-prev__img 
+				video(src="video/"+video+'.mp4' loop  playsinline muted) 
+			.location-prev__price= price
+		.location-prev__desc= desc
+		a.location-prev__title.h3(href="#")= title
+		a.location-prev__link.btn-border._arrow-btn(href="#") Подробнее
+ 
+

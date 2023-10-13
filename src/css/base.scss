@@ -1,0 +1,173 @@
+body {
+	background: #F4F4F4;
+	font-family: Manrope;
+	color: $dark;
+
+}
+
+input,
+button {
+	font-family: Manrope;
+}
+
+.aos-init {
+	pointer-events: initial !important;
+}
+
+html._no-scroll {
+	body {
+		overflow: hidden;
+	}
+
+	#pagescroll {
+		transform: none !important;
+	}
+
+	overflow: hidden;
+}
+
+.page {
+	overflow-x: hidden;
+}
+
+
+._only-mob {
+	@media(min-width:600px) {
+		display: none;
+	}
+}
+
+._only-desc {
+	@media(max-width:600px) {
+		display: none;
+	}
+}
+
+.inner-sm {
+	max-width: 890px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#pagescroll {
+	padding-top: 102px;
+	padding-top: 15px;
+	display: flex;
+	flex-direction: column;
+
+	@media(max-width:1024px) {
+		padding-top: 102px;
+		// padding-bottom: 40px;
+	}
+
+	&:has(.front) {
+		padding-bottom: 0;
+	}
+}
+
+body:has(#popup-template) {
+	#pagescroll {
+		padding-top: 68px;
+		padding-bottom: 20px;
+	}
+}
+
+._ml-auto {
+	margin-left: auto;
+}
+
+img {
+	max-width: 100%;
+}
+
+.inner {
+	padding: 0 var(--inner-padding);
+}
+
+.inner-sm {
+	padding: 0 var(--inner-sm-padding);
+}
+
+._d-none {
+	display: none !important
+}
+
+
+._br {
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+._only-desc {
+	@media(max-width:992px) {
+		display: none;
+	}
+}
+
+._br-16 {
+	border-radius: 16px;
+	overflow: hidden;
+}
+
+button {
+	background: transparent;
+	border: 0 solid;
+}
+
+.mb-minimum {
+	margin-bottom: 16px;
+}
+
+.center {
+	text-align: center;
+}
+
+._mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+._mt-30 {
+	margin-top: 30px;
+}
+
+._d-none {
+	display: none;
+}
+
+.block {
+	margin-bottom: 120px;
+
+	@media(max-width:992px) {
+		margin-bottom: 83px;
+	}
+
+	@media(max-width:600px) {
+		margin-bottom: 60px;
+	}
+
+	&__btns {
+		display: flex;
+		flex-direction: row;
+		gap: 10px
+	}
+
+	&__head {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 35px;
+
+		@media(max-width:992px) {
+			margin-bottom: 20px;
+		}
+
+		h2,
+		.h2 {
+			margin-bottom: 0;
+			margin-top: 0px;
+			margin-right: auto;
+		}
+	}
+}

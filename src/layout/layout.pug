@@ -1,0 +1,65 @@
+include mixin
+doctype html
+html(lang="ru")
+	block head
+		head
+			meta(charset="utf-8")
+			block title
+			meta(content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport")
+			meta(content="ie=edge" http-equiv="x-ua-compatible")
+			!='<link rel="preconnect" href="https://fonts.googleapis.com">'
+			!='<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' 
+			!='<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">' 
+			link(rel="stylesheet" href="css/style.min.css")
+			link(rel="stylesheet" href="css/vendor.css")
+			link(rel="stylesheet" href="css/all.min.css")
+			<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+			<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+			<link rel="manifest" href="/site.webmanifest">
+			<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+			<meta name="msapplication-TileColor" content="#2b5797">
+			<meta name="theme-color" content="#ffffff">
+			<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+			<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+	body(data-barba="wrapper")
+
+		block pagetop
+
+			//- script.
+			//-     let isCityChange = false 
+		
+	  
+		//- include component/preloader/preloader
+		
+		.page
+			//- include ../components/header/header
+			#pagescroll(data-aos-container)
+				.inner 
+					block content
+				include ../components/footer/footer
+
+		#defs 
+			<svg width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg">
+				<defs>
+
+					<linearGradient  gradientTransform="rotate(137)" id="Gradient" x1="0" x2="0" y1="0" y2="1">
+						<stop offset="0%" stop-color="#A0BA4F" />
+						<stop offset="100%" stop-color="#7A8E3B" />
+					</linearGradient>
+				</defs>
+			</svg>
+		block scripts
+			<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+			<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+			</script>
+			<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js "></script>
+			<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+			script(src='js/vendor.js')
+			script(src='js/main.js')

@@ -1,0 +1,673 @@
+extends ../../layout/layout
+block title
+	title О клубе
+block content
+	main(data-barba="container" data-barba-namespace="front")
+		.front-top.block._br
+			.swiper.front-top__slider
+				.swiper-wrapper 
+					.swiper-slide 
+						video(src="video/couple-standing-on-wooden-terrace-outdoors-and-tal-2022-08-05-02-42-36-utc.mp4" loop autoplay playsinline muted) 
+					.swiper-slide 
+						+picture('ftop','jpg')
+					.swiper-slide 
+						+picture('ftop','jpg')
+					.swiper-slide 
+						+picture('ftop','jpg')
+			.front-top__pagi
+			
+			include ../../components/header/header
+			.front-top__content
+				h1 Комфортный отдых
+					br
+					| наедине с природой
+				p Сеть коттеджей «СОВА» — ваш отдых на природе полностью продуман
+		.front-about.block 
+			.text
+				h2 
+					color «Sova» 
+					| — это место, где ваш
+					br
+					| комфортный отдых на природе 
+					br
+					| полностью продуман
+				p 12 локаций, расположенных в экологически чистых местах недалеко от Санкт-Петербурга. Охраняемая и огороженная территория с детской и спортивной площадками, и с зоной барбекю у каждого домика. Панорамное остекление позволит ощутить себя на природе, оставаясь в тепле и комфорте.
+			ul.front-about__awards
+				li 
+					span World Travel Awards
+				li 
+					span Travellers' Choice
+				li 
+					span Tui 
+						br
+						| Environmental Champion
+		.front-locations.block 
+			.block__head 
+				h2  Локации и коттеджи
+				.block__btns 
+					.btn-border(type="button").front-locations__map Локации на карте
+					.btn-border(type="button").front-locations__row._d-none Локации списом
+					a.btn-border._arrow-btn(href="/")._only-desc Все локации и коттеджи
+			.front-locations__slider.swiper 
+				.swiper-wrapper 
+					.swiper-slide
+						.swiper.front-locations__slider2
+							.swiper-wrapper.front-locations__grid
+								+loacationPrev('video-2', 'от 4 600₽',"Лен. область, Приозерский р-н, Сосновское сельское пос.","СОВА «Стеклянный ручей»").swiper-slide
+								+loacationPrev('video-3', 'от 4 600₽',"110 км от С-Пб","СОВА «Форелевая ферма»").swiper-slide
+								+loacationPrev('video-1', 'от 4 600₽',"дер. Гостилицы, 20 км от Петергофа","СОВА «На Прудах»").swiper-slide
+								+loacationPrev('video-4', 'от 4 600₽',"39 км от Петергофа","СОВА «На пригорке»").swiper-slide
+								+loacationPrev('video-5', 'от 4 600₽',"пос. Лебяжье, 20 км от Ломоносова","СОВА «На Заливе»").swiper-slide
+								+loacationPrev('video-6', 'от 4 600₽',"48 км от Красного Села","СОВА «Сказка Вест»").swiper-slide
+						.front-locations__more-wrap
+							a.front-locations__more(href="#")
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M8 0V16M0 8H16" stroke="#2F3740"/>
+								</svg>
+						.center
+							a.btn-border._arrow-btn(href="/")._only-mob Все локации и коттеджи
+					.swiper-slide
+						._br.front-locations__map#front-loc-map(data-center="55.750412587689375,37.61784255833102" data-icon="img/marker.svg",data-activeicon="img/marker.svg")
+						#popup-location-1.map-location._hover-in-video(data-coord="55.754159773916264,37.56994848632801")
+							.map-location__img
+								video(src="video/video-1.mp4" loop  playsinline muted) 
+							.map-location__title.h4 СОВА «Стеклянный ручей»
+							ul.map-location__list 
+								li 
+									img(src="img/i1.svg", alt="")
+									span 9 коттеджей «Комфорт» 54 м² до 6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+								li 
+									img(src="img/i3.svg", alt="")
+									span  2 глэмпинга на 2 гостя
+								li 
+									img(src="img/i4.svg", alt="")
+									span  2 бани «Комфорт» на 4–6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+								li 
+									img(src="img/i1.svg", alt="")
+									span 9 коттеджей «Комфорт» 54 м² до 6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+								li 
+									img(src="img/i3.svg", alt="")
+									span  2 глэмпинга на 2 гостя
+								li 
+									img(src="img/i4.svg", alt="")
+									span  2 бани «Комфорт» на 4–6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+							a(href="#").btn-border._arrow-btn Далее
+						#popup-location-2.map-location._hover-in-video(data-coord="55.775064617557724,37.736116699218314")
+							.map-location__img
+								video(src="video/video-2.mp4" loop  playsinline muted) 
+							.map-location__title.h4 СОВА «Стеклянный ручей»
+							ul.map-location__list 
+								li 
+									img(src="img/i1.svg", alt="")
+									span 9 коттеджей «Комфорт» 54 м² до 6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+								li 
+									img(src="img/i3.svg", alt="")
+									span  2 глэмпинга на 2 гостя
+								li 
+									img(src="img/i4.svg", alt="")
+									span  2 бани «Комфорт» на 4–6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+								li 
+									img(src="img/i1.svg", alt="")
+									span 9 коттеджей «Комфорт» 54 м² до 6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+								li 
+									img(src="img/i3.svg", alt="")
+									span  2 глэмпинга на 2 гостя
+								li 
+									img(src="img/i4.svg", alt="")
+									span  2 бани «Комфорт» на 4–6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+							a(href="#").btn-border._arrow-btn Далее
+						#popup-location-3.map-location._hover-in-video(data-coord="55.72549411020238,37.72513037109315")
+							.map-location__img
+								video(src="video/video-3.mp4" loop  playsinline muted) 
+							.map-location__title.h4 СОВА «Стеклянный ручей»
+							ul.map-location__list 
+								li 
+									img(src="img/i1.svg", alt="")
+									span 9 коттеджей «Комфорт» 54 м² до 6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+								li 
+									img(src="img/i3.svg", alt="")
+									span  2 глэмпинга на 2 гостя
+								li 
+									img(src="img/i4.svg", alt="")
+									span  2 бани «Комфорт» на 4–6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+								li 
+									img(src="img/i1.svg", alt="")
+									span 9 коттеджей «Комфорт» 54 м² до 6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+								li 
+									img(src="img/i3.svg", alt="")
+									span  2 глэмпинга на 2 гостя
+								li 
+									img(src="img/i4.svg", alt="")
+									span  2 бани «Комфорт» на 4–6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+							a(href="#").btn-border._arrow-btn  Далее
+						#popup-location-4.map-location._hover-in-video(data-coord="55.69409258427795,37.603594116210076")
+							.map-location__img
+								video(src="video/video-4.mp4" loop  playsinline muted) 
+							.map-location__title.h4 СОВА «Стеклянный ручей»
+							ul.map-location__list 
+								li 
+									img(src="img/i1.svg", alt="")
+									span 9 коттеджей «Комфорт» 54 м² до 6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+								li 
+									img(src="img/i3.svg", alt="")
+									span  2 глэмпинга на 2 гостя
+								li 
+									img(src="img/i4.svg", alt="")
+									span  2 бани «Комфорт» на 4–6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+								li 
+									img(src="img/i1.svg", alt="")
+									span 9 коттеджей «Комфорт» 54 м² до 6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+								li 
+									img(src="img/i3.svg", alt="")
+									span  2 глэмпинга на 2 гостя
+								li 
+									img(src="img/i4.svg", alt="")
+									span  2 бани «Комфорт» на 4–6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+							a(href="#").btn-border._arrow-btn  Далее
+						#popup-location-5.map-location._hover-in-video(data-coord="555.656066722813975,37.28224401855369")
+							.map-location__img
+								video(src="video/video-5.mp4" loop  playsinline muted) 
+							.map-location__title.h4 СОВА «Стеклянный ручей»
+							ul.map-location__list 
+								li 
+									img(src="img/i1.svg", alt="")
+									span 9 коттеджей «Комфорт» 54 м² до 6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+								li 
+									img(src="img/i3.svg", alt="")
+									span  2 глэмпинга на 2 гостя
+								li 
+									img(src="img/i4.svg", alt="")
+									span  2 бани «Комфорт» на 4–6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+								li 
+									img(src="img/i1.svg", alt="")
+									span 9 коттеджей «Комфорт» 54 м² до 6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+								li 
+									img(src="img/i3.svg", alt="")
+									span  2 глэмпинга на 2 гостя
+								li 
+									img(src="img/i4.svg", alt="")
+									span  2 бани «Комфорт» на 4–6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+							a(href="#").btn-border._arrow-btn  Далее
+						#popup-location-6.map-location._hover-in-video(data-coord="55.90064322601411,37.19435339355335")
+							.map-location__img
+								video(src="video/video-6.mp4" loop  playsinline muted) 
+							.map-location__title.h4 СОВА «Стеклянный ручей»
+							ul.map-location__list 
+								li 
+									img(src="img/i1.svg", alt="")
+									span 9 коттеджей «Комфорт» 54 м² до 6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+								li 
+									img(src="img/i3.svg", alt="")
+									span  2 глэмпинга на 2 гостя
+								li 
+									img(src="img/i4.svg", alt="")
+									span  2 бани «Комфорт» на 4–6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+								li 
+									img(src="img/i1.svg", alt="")
+									span 9 коттеджей «Комфорт» 54 м² до 6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+								li 
+									img(src="img/i3.svg", alt="")
+									span  2 глэмпинга на 2 гостя
+								li 
+									img(src="img/i4.svg", alt="")
+									span  2 бани «Комфорт» на 4–6 гостей
+								li 
+									img(src="img/i2.svg", alt="")
+									span  2 коттеджа «Лайт» на 2 гостя
+							a(href="#").btn-border._arrow-btn Далее
+
+					
+
+
+		.front-quiz.block._br
+			.front-quiz__grid 
+				.front-quiz__test
+					.front-quiz__test-top
+						h3 Поможем подобрать лучший коттедж
+						p Выберите один или несколько ответов и мы подберем отдых специально для вас
+					form(action="quiz.html" method="GET" id="front-quiz__form")
+						.swiper.front-quiz__slider-test
+							.swiper-wrapper 
+								.swiper-slide 
+										h4 Какая цель вашего отдыха?
+										.front-quiz__list
+											label.front-quiz__radio
+												input(type="radio", name="target")
+												span.front-quiz__radio-indicator
+												span.front-quiz__radio-label Хочу провести время с семьей или друзьями
+											label.front-quiz__radio
+												input(type="radio", name="target")
+												span.front-quiz__radio-indicator
+												span.front-quiz__radio-label Устроить романтик второй половинке
+											label.front-quiz__radio
+												input(type="radio", name="target")
+												span.front-quiz__radio-indicator
+												span.front-quiz__radio-label Отдохнуть от суеты города в одиночестве
+											label.front-quiz__radio
+												input(type="radio", name="target")
+												span.front-quiz__radio-indicator
+												span.front-quiz__radio-label Корпоратив с коллегами
+								.swiper-slide 
+										h4 Для какой компании подобрать коттедж?
+										.front-quiz__list
+											label.front-quiz__radio
+												input(type="radio", name="quantity")
+												span.front-quiz__radio-indicator
+												span.front-quiz__radio-label До 2 человек
+											label.front-quiz__radio
+												input(type="radio", name="quantity")
+												span.front-quiz__radio-indicator
+												span.front-quiz__radio-label До 4 человек
+											label.front-quiz__radio
+												input(type="radio", name="quantity")
+												span.front-quiz__radio-indicator
+												span.front-quiz__radio-label До 6 человек
+											label.front-quiz__radio
+												input(type="radio", name="quantity")
+												span.front-quiz__radio-indicator
+												span.front-quiz__radio-label До 8 человек
+											label.front-quiz__radio
+												input(type="radio", name="quantity")
+												span.front-quiz__radio-indicator
+												span.front-quiz__radio-label До 10 человек
+								.swiper-slide 
+										h4 Что для вас особенно важно?
+										.front-quiz__list
+											label.front-quiz__checkbox
+												input(type="radio", name="important")
+												span.front-quiz__checkbox-indicator
+												span.front-quiz__checkbox-label Расположение вблизи леса или у реки
+											label.front-quiz__checkbox
+												input(type="radio", name="important")
+												span.front-quiz__checkbox-indicator
+												span.front-quiz__checkbox-label Уютный камин в коттедже
+											label.front-quiz__checkbox
+												input(type="radio", name="important")
+												span.front-quiz__checkbox-indicator
+												span.front-quiz__checkbox-label Банный комплекс, купели и СПА
+											label.front-quiz__checkbox
+												input(type="radio", name="important")
+												span.front-quiz__checkbox-indicator
+												span.front-quiz__checkbox-label Панорамные окна с видом на природу
+											label.front-quiz__checkbox
+												input(type="radio", name="important")
+												span.front-quiz__checkbox-indicator
+												span.front-quiz__checkbox-label Мангал во дворе
+					
+					.front-quiz__test-bottom 
+						button(type="button").front-quiz__test-back._disable 
+							<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.10961 13.549L8.63994 14.0793L7.57928 15.14L7.04895 14.6097L8.10961 13.549ZM3.99994 10.5L3.46961 11.0303L2.93927 10.5L3.46961 9.96967L3.99994 10.5ZM7.04895 6.39032L7.57928 5.85999L8.63994 6.92065L8.10961 7.45098L7.04895 6.39032ZM7.04895 14.6097L3.46961 11.0303L4.53026 9.96967L8.10961 13.549L7.04895 14.6097ZM3.46961 9.96967L7.04895 6.39032L8.10961 7.45098L4.53026 11.0303L3.46961 9.96967ZM3.99994 9.75H15.6328V11.25H3.99994V9.75Z" fill="white"/>
+							</svg>
+							| Назад
+						.front-quiz__test-pagi 
+							span 03 
+							|  из 03
+						button.btn-border._arrow-btn.front-quiz__test-next(type="button") Далее
+				.front-quiz__img 
+					.swiper.front-quiz__slider._br
+						.swiper-wrapper 
+							.swiper-slide
+								+picture('quiz','jpg')
+							.swiper-slide
+								+picture('quiz','jpg')
+							.swiper-slide
+								+picture('quiz','jpg')
+							.swiper-slide
+								+picture('quiz','jpg')
+							.swiper-slide
+								+picture('quiz','jpg')
+		.front-bath.block.mb-minimum._br._hover-in-video
+			.front-bath__grid
+				.front-bath__img._br-16
+					video(src="video/a-man-in-a-sauna-beats-boys-on-the-back-with-a-bro-2023-04-19-19-14-54-utc.mp4" loop  playsinline muted) 
+				.front-bath__content
+					h3  Бани
+					p Баня — это аромат березового веника, русский душ, мангальная зона, расслабляющая обстановка и волшебный вкус травяного чая с медом. 
+						br
+						| В вашем распоряжении окажется русская изба с парной, просторной гостиной с двумя столами, местом для переодевания, туалетом и двумя душевыми, кухней и застекленной террасой, на которую можно выйти после парной.
+					a.btn-border._arrow-btn.front-bath__link(href="") Подробнее
+		.front-restaurant.block
+			.block__head 
+				h2 Рестораны
+				.block__btns 
+					a.btn-border._arrow-btn(href="")._only-desc Все рестораны
+			.front-restaurant__grid
+				.front-restaurant__img-wrap._br
+					+picture('rest','jpg')
+				.front-restaurant__content._br
+					h3 Ресторан Боярский
+					p Умеренная роскошь – основное определение стиля.
+						br
+						|Ощущение праздника и неповторимости момента не покидает 
+						br
+						|Вас на протяжении всего пребывания в этом чудеснейшем месте.
+					p
+						a.btn-border._arrow-btn(href="") Подробнее
+				.center._only-mob._mt-30
+					a.btn-border._arrow-btn(href="")._only-desc Все рестораны
+		.front-service.block
+			.block__head 
+				h2 Услуги
+				.block__btns 
+					a.btn-border._arrow-btn(href="")._only-desc Все услуги
+			.swiper.front-service__slider 
+				.swiper-wrapper 
+					.swiper-slide.front-service__preview
+						.front-service__preview-img._br
+							+picture('service-1','jpg')
+							<svg class="front-service__preview-arrow" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="25" cy="25" r="25" fill="white"/>
+								<path d="M30.5409 19.8212L17.8981 32.464M30.5409 19.8212H17.8981M30.5409 19.8212V32.464" stroke-width="2"/>
+								<path d="M17.8979 19.8213H30.5408V32.4641" stroke-width="2"/>
+							</svg>
+
+
+						a(href="@").front-service__preview-title.h4 Cкидки при бронировании в день заезда
+					.swiper-slide.front-service__preview
+						.front-service__preview-img._br
+							+picture('service-2','jpg')
+							<svg class="front-service__preview-arrow" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="25" cy="25" r="25" fill="white"/>
+								<path d="M30.5409 19.8212L17.8981 32.464M30.5409 19.8212H17.8981M30.5409 19.8212V32.464" stroke-width="2"/>
+								<path d="M17.8979 19.8213H30.5408V32.4641" stroke-width="2"/>
+							</svg>
+						a(href="@").front-service__preview-title.h4 Фотосессия с профессиональным фотографом
+					.swiper-slide.front-service__preview
+						.front-service__preview-img._br
+							+picture('service-3','jpg')
+							<svg class="front-service__preview-arrow" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="25" cy="25" r="25" fill="white"/>
+								<path d="M30.5409 19.8212L17.8981 32.464M30.5409 19.8212H17.8981M30.5409 19.8212V32.464" stroke-width="2"/>
+								<path d="M17.8979 19.8213H30.5408V32.4641" stroke-width="2"/>
+							</svg>
+						a(href="@").front-service__preview-title.h4 Пакет для романтического вечера
+					.swiper-slide.front-service__preview
+						.front-service__preview-img._br
+							+picture('service-4','jpg')
+							<svg class="front-service__preview-arrow" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="25" cy="25" r="25" fill="white"/>
+								<path d="M30.5409 19.8212L17.8981 32.464M30.5409 19.8212H17.8981M30.5409 19.8212V32.464" stroke-width="2"/>
+								<path d="M17.8979 19.8213H30.5408V32.4641" stroke-width="2"/>
+							</svg>
+						a(href="@").front-service__preview-title.h4 Солевой пилинг
+					.swiper-slide.front-service__preview
+						.front-service__preview-img._br
+							+picture('service-1','jpg')
+							<svg class="front-service__preview-arrow" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="25" cy="25" r="25" fill="white"/>
+								<path d="M30.5409 19.8212L17.8981 32.464M30.5409 19.8212H17.8981M30.5409 19.8212V32.464" stroke-width="2"/>
+								<path d="M17.8979 19.8213H30.5408V32.4641" stroke-width="2"/>
+							</svg>
+						a(href="@").front-service__preview-title.h4 Cкидки при бронировании в день заезда
+					.swiper-slide.front-service__preview
+						.front-service__preview-img._br
+							+picture('service-2','jpg')
+							<svg class="front-service__preview-arrow" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="25" cy="25" r="25" fill="white"/>
+								<path d="M30.5409 19.8212L17.8981 32.464M30.5409 19.8212H17.8981M30.5409 19.8212V32.464" stroke-width="2"/>
+								<path d="M17.8979 19.8213H30.5408V32.4641" stroke-width="2"/>
+							</svg>
+						a(href="@").front-service__preview-title.h4 Фотосессия с профессиональным фотографом
+					.swiper-slide.front-service__preview
+						.front-service__preview-img._br
+							+picture('service-3','jpg')
+							<svg class="front-service__preview-arrow" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="25" cy="25" r="25" fill="white"/>
+								<path d="M30.5409 19.8212L17.8981 32.464M30.5409 19.8212H17.8981M30.5409 19.8212V32.464" stroke-width="2"/>
+								<path d="M17.8979 19.8213H30.5408V32.4641" stroke-width="2"/>
+							</svg>
+						a(href="@").front-service__preview-title.h4 Пакет для романтического вечера
+					.swiper-slide.front-service__preview
+						.front-service__preview-img._br
+							+picture('service-4','jpg')
+							<svg class="front-service__preview-arrow" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="25" cy="25" r="25" fill="white"/>
+								<path d="M30.5409 19.8212L17.8981 32.464M30.5409 19.8212H17.8981M30.5409 19.8212V32.464" stroke-width="2"/>
+								<path d="M17.8979 19.8213H30.5408V32.4641" stroke-width="2"/>
+							</svg>
+						a(href="@").front-service__preview-title.h4 Солевой пилинг
+					.swiper-slide.front-service__preview
+						.front-service__preview-img._br
+							+picture('service-1','jpg')
+							<svg class="front-service__preview-arrow" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="25" cy="25" r="25" fill="white"/>
+								<path d="M30.5409 19.8212L17.8981 32.464M30.5409 19.8212H17.8981M30.5409 19.8212V32.464" stroke-width="2"/>
+								<path d="M17.8979 19.8213H30.5408V32.4641" stroke-width="2"/>
+							</svg>
+						a(href="@").front-service__preview-title.h4 Cкидки при бронировании в день заезда
+					.swiper-slide.front-service__preview
+						.front-service__preview-img._br
+							+picture('service-2','jpg')
+							<svg class="front-service__preview-arrow" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="25" cy="25" r="25" fill="white"/>
+								<path d="M30.5409 19.8212L17.8981 32.464M30.5409 19.8212H17.8981M30.5409 19.8212V32.464" stroke-width="2"/>
+								<path d="M17.8979 19.8213H30.5408V32.4641" stroke-width="2"/>
+							</svg>
+						a(href="@").front-service__preview-title.h4 Фотосессия с профессиональным фотографом
+					.swiper-slide.front-service__preview
+						.front-service__preview-img._br
+							+picture('service-3','jpg')
+							<svg class="front-service__preview-arrow" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="25" cy="25" r="25" fill="white"/>
+								<path d="M30.5409 19.8212L17.8981 32.464M30.5409 19.8212H17.8981M30.5409 19.8212V32.464" stroke-width="2"/>
+								<path d="M17.8979 19.8213H30.5408V32.4641" stroke-width="2"/>
+							</svg>
+						a(href="@").front-service__preview-title.h4 Пакет для романтического вечера
+					.swiper-slide.front-service__preview
+						.front-service__preview-img._br
+							+picture('service-4','jpg')
+							<svg class="front-service__preview-arrow" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="25" cy="25" r="25" fill="white"/>
+								<path d="M30.5409 19.8212L17.8981 32.464M30.5409 19.8212H17.8981M30.5409 19.8212V32.464" stroke-width="2"/>
+								<path d="M17.8979 19.8213H30.5408V32.4641" stroke-width="2"/>
+							</svg>
+						a(href="@").front-service__preview-title.h4 Солевой пилинг
+			.center._only-mob._mt-30
+					a.btn-border._arrow-btn(href="")._only-desc Все услуги
+
+	
+		.front-promo.block
+			.block__head 
+				h2  Акции и спецпредложения
+				
+			.swiper.front-promo__slider 
+				.swiper-wrapper 
+					.swiper-slide.front-promo__preview
+						.front-promo__preview-img._br
+							+picture('fp-1','jpg')
+						.front-promo__preview-content
+							.front-promo__preview-type Акция
+							a(href="@").front-promo__preview-title.h4 Cкидки при бронировании в день заезда
+
+	
+					.swiper-slide.front-promo__preview
+						.front-promo__preview-img._br
+							+picture('fp-1','jpg')
+						.front-promo__preview-content
+							.front-promo__preview-type Спецпредложениекция
+							a(href="@").front-promo__preview-title.h4 Специальные условия на банкетное обслуживание
+
+	
+					.swiper-slide.front-promo__preview
+						.front-promo__preview-img._br
+							+picture('fp-1','jpg')
+						.front-promo__preview-content
+							.front-promo__preview-type Акция
+							a(href="@").front-promo__preview-title.h4 Скидки на свадьбы и годовщины
+
+	
+					.swiper-slide.front-promo__preview
+						.front-promo__preview-img._br
+							+picture('fp-1','jpg')
+						.front-promo__preview-content
+							.front-promo__preview-type Акция
+							a(href="@").front-promo__preview-title.h4 Скидка для именинников
+
+	
+		.front-events.block
+			.block__head 
+				h2  Мероприятия
+				.filters 
+					.filters__wrap
+						.filters__flex
+							.filters__btn._active(data-slide="0") Все
+							.filters__btn(data-slide="1") 8 марта
+							.filters__btn(data-slide="2") Майские праздники
+							.filters__btn(data-slide="3") Новый Год
+			.swiper.front-events__slider 
+				.swiper-wrapper 
+					.swiper-slide.front-events__event._br
+						.front-events__event-bg
+							+picture('f-event','jpg')
+						.front-events__event-content
+							a.h3(href="#").front-events__event-title Праздник весны и 8 марта
+							ul.front-events__event-bottom
+								li с 1 по 9 марта 2023 года 
+								li 8 марта
+					.swiper-slide.front-events__event._br
+						.front-events__event-bg
+							+picture('f-event','jpg')
+						.front-events__event-content
+							a.h3(href="#").front-events__event-title Фестиваль воздушных змеев
+							ul.front-events__event-bottom
+								li с 1 по 9 марта 2023 года 
+								li 8 марта
+					.swiper-slide.front-events__event._br
+						.front-events__event-bg
+							+picture('f-event','jpg')
+						.front-events__event-content
+							a.h3(href="#").front-events__event-title Фестиваль воздушных змеев
+							ul.front-events__event-bottom
+								li с 1 по 9 марта 2023 года 
+								li 8 марта
+					.swiper-slide.front-events__event._br
+						.front-events__event-bg
+							+picture('f-event','jpg')
+						.front-events__event-content
+							a.h3(href="#").front-events__event-title Праздник весны и 8 марта
+							ul.front-events__event-bottom
+								li с 1 по 9 марта 2023 года 
+								li 8 марта
+	
+		.front-news.block.mb-minimum
+			.block__head 
+				h2  Новости
+				.block__btns 
+					a.btn-border._arrow-btn(href="")._only-desc Все публикации
+			.front-news__grid 
+				.front-news__grid-news
+					.front-news__preview._br
+						a(href="/").h4.front-news__preview-title Расширяем спектр услуг!
+						ul.front-news__preview-bottom 
+							li 01.01.2023
+							li Новости
+					.front-news__preview._br
+						a(href="/").h4.front-news__preview-title Сеть коттеджей «Сова» стала участником SPA Business Forum
+						ul.front-news__preview-bottom 
+							li 01.01.2023
+							li Статьи
+					.front-news__preview._br
+						a(href="/").h4.front-news__preview-title «Сеть загородных коттеджей «Сова» в финале престижной петербургской премии Фонтанка.ру «Признание
+						ul.front-news__preview-bottom 
+							li 01.01.2023
+							li  Сми о нас
+					.front-news__preview._br
+						a(href="/").h4.front-news__preview-title Сеть коттеджей «Сова» в городском марафоне мероприятий «Открытие туристского сезона»
+						ul.front-news__preview-bottom 
+							li 01.01.2023
+							li Новости
+				.front-news__slider-wrap._br
+					.swiper.front-news__slider 
+						.swiper-wrapper 
+							.swiper-slide 
+								+picture('f-news-slider','jpg')
+							.swiper-slide 
+								+picture('f-news-slider','jpg')
+							.swiper-slide 
+								+picture('f-news-slider','jpg')
+				
+
+		.front-invest._br
+			.front-invest__grid
+				.front-invest__img._br-16
+					+picture('front-invest','jpg')
+				.front-invest__content
+					.h4 Простые инвестиции
+						br
+						| в загородную недвижимость
+						br
+						| с высоким доходом
+					.front-invest__footer
+						a(href="").front-invest__link.btn-border._arrow-btn._btn-dark  Перейти на сайт
+						img(src="img/invest.svg", alt="")
+

@@ -1,0 +1,8 @@
+mixin picture(name, ext)
+	picture
+		if ext!='svg'
+			source(type="image/webp",srcset="img/"+name+".webp")
+		img(class!=attributes.class, alt="",src="img/"+name+"."+ext)
+
+mixin img(name)
+	img(class!=attributes.class, alt="",src="img/"+name)
