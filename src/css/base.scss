@@ -50,18 +50,19 @@ html._no-scroll {
 }
 
 #pagescroll {
-	padding-top: 102px;
-	padding-top: 15px;
+
+
 	display: flex;
 	flex-direction: column;
+	padding-top: 102px;
 
 	@media(max-width:1024px) {
 		padding-top: 102px;
 		// padding-bottom: 40px;
 	}
 
-	&:has(.front) {
-		padding-bottom: 0;
+	&:has(.front-top) {
+		padding-top: 15px !important;
 	}
 }
 
